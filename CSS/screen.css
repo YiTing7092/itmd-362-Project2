@@ -445,7 +445,9 @@ td {
   html {
     padding: 0;
   }
-  .primary,
+  #calendar,
+  #policies,
+  #projects,
   #instructor,
   #links {
     padding-left: 14.28571429%; /* 93/651 */
@@ -464,9 +466,9 @@ td {
     margin-right: -50%; /* 186/372 */
     padding-right: 50%;
   }
-  /*.agenda > ol {
+  .agenda > ol {
     display: block;
-  }*/
+  }
   .link-group {
     position: relative;
   }
