@@ -90,11 +90,8 @@ ol,
 ul {
   padding-bottom: 1.2631578947em;
 }
-ul > li {
-  list-style-type: square;
-}
+
 ol > li {
-  list-style-type: decimal;
   margin-left: 1em;
 }
 li ul,
@@ -132,7 +129,7 @@ h4 {
   font-weight: bold;
   padding-bottom: 1.2631578947em;
 }
-h4 {
+h5 {
   text-transform: none;
   padding-bottom: 0.6315789474em;
 }
@@ -149,7 +146,6 @@ nav {
   top: 0;
   left: 0;
 }
-#links,
 #instructor {
   margin-top: 2.5263157895em;
 }
@@ -209,7 +205,7 @@ nav {
 #calendar #nav-cal a,
 #projects #nav-pro a,
 #policies #nav-pol a,
-#due_date #nav-dat a {
+#links #nav-lnk a {
   background-color: #FFCE0B;
 }
 
@@ -360,7 +356,9 @@ td {
 	margin-left: 30%;
 	margin-right: 30%;
 }
-#h3wide {
+#h3wide,
+#inswide {
+  background-color: #93A341;
   width: 750px;
 }
 
@@ -386,6 +384,7 @@ td {
   margin: 0 auto;
   width: 70%;
 }
+
 
 /* ========== State ========== */
 
@@ -446,8 +445,6 @@ td {
   html {
     padding: 0;
   }
-  header,
-  footer,
   .primary,
   #instructor,
   #links {
@@ -467,9 +464,9 @@ td {
     margin-right: -50%; /* 186/372 */
     padding-right: 50%;
   }
-  .agenda > ol {
+  /*.agenda > ol {
     display: block;
-  }
+  }*/
   .link-group {
     position: relative;
   }
