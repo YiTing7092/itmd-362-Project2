@@ -149,6 +149,20 @@ nav {
 #instructor {
   margin-top: 2.5263157895em;
 }
+#w2,
+#w4,
+#w6,
+#w8,
+#w10,
+#w12,
+#w14,
+#w16,
+#labs_t,
+#pro1_t,
+#pro2_t,
+#pro3_t{
+  background-color: #F5F6CE;
+}
 
 /* ========== Modules ========== */
 
