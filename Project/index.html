@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
   <link rel="stylesheet" href="../css/screen.css" media="screen" />
   <link rel="icon" type="image/x-icon" href="http://web.iit.edu/sites/web/themes/iit_web/favicon.ico">
+  <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../site.js"></script-->
 </head>
 <body>
   <div id="page">
@@ -24,11 +26,17 @@
           <li id="nav-lnk"><a href="../Links">Links</a></li>
         </ul>
       </nav>
+      <div id="nav_jum">
+        <ul class="jumpers">
+          <li><a id="tools-jump_p1" href="#P1_content">Project 1</a></li>
+          <li><a id="tools-jump_p2" href="#P2_content">Project 2</a></li>
+          <li><a id="tools-jump_p3" href="#P3_content">Project 3</a></li>
+        </ul>
     </header>
     <main>
       <section class="primary">
         <h2 class="label">Major Projects</h2>
-        <article>
+        <article id="P1_content">
           <h3 id="project-one">Project One: Onboarding</h3>
           <section class="description">
             <h4>Project Description</h4>
@@ -155,7 +163,7 @@
             </ul>
           </section>
         </article>
-        <article class="preview">
+        <article class="preview" id="P2_content">
           <h3 id="project-two">Project Two: Redesign THIS Website!</h3>
           <section class="description">
             <h4>Project Description</h4>
@@ -298,7 +306,7 @@
             </ul>
           </section>
         </article>
-        <article>
+        <article id="P3_content">
           <h3 id="project-three">Project Three: User-Tested, Revised Web Portal</h3>
           <section class="description">
             <h4>Project Description</h4>
@@ -389,5 +397,5 @@
         the educational goals of this class.
       </p>
     </footer>
-  </div>
 </body>
+</html>
