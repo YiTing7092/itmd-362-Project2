@@ -398,6 +398,7 @@ td {
   width: 70%;
 }
 
+
 /* ========== State ========== */
 
 .hasjs .extended {
@@ -406,45 +407,8 @@ td {
 .is-visible .extended {
   display: block;
 }
-/*.hide #P2_content,
-.hide #P3_content{
-  margin-left: 150%;
-}
-
 /* js tools*/
-.has-info body{
-  overflow-x: hidden;
-}
-#P1_content,
-#P2_content,
-#P3_content {
-  transition: margin-right 1s;
-}
-.hasjs #P1_content,
-.hasjs #P2_content,
-.hasjs #P3_content {
-  width: 100%;
-}
-.has-info #P1_content,
-.has-info #P2_content,
-.has-info #P3_content {
-  margin-right: 50%;
-}
-.hasjs #tools-jump_p1,
-.hasjs #tools-jump_p2,
-.hasjs #tools-jump_p3 {
-  transition: none; /* No transition on load or tool close*/
-  opacity: 0;
-  position: absolute;
-  top: 120px;
-  left: 5%;
-}
-.has-info #P1_content,
-.has-info #P2_content,
-.has_info #P3_content {
-  transition: opacity 1s 1s;
-  opacity: 1;
-}
+
 
 /* Media Queries */
 
