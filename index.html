@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" id="calendar" class="no-js" prefix="og: http://ogp.me/ns#">
-<head>
+<head id="ca_head">
   <meta charset="utf-8" />
   <title>ITMD 362: Human-Computer Interaction and Web Design (Spring 2018)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
   <link rel="stylesheet" href="CSS/screen2.css" media="screen" />
   <link rel="icon" type="image/x-icon" href="http://web.iit.edu/sites/web/themes/iit_web/favicon.ico">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body id="ca_body">
   <div id="page">
     <header id="header">
       <h1><small>ITMD 362</small> Human-Computer Interaction and Web&nbsp;Design</h1>
@@ -25,7 +28,6 @@
         </ul>
       </nav>
     </header>
-
     <main id="content">
       <article class="primary">
         <h2 class="label">Course Calendar</h2>
@@ -40,284 +42,364 @@
               <td class="tabletitle" colspan="1">Topic Schedule&#58;</td>
             </tr>
           </table>
-          <table>
-            <tr class="tablehead">
-              <td class="firstrow">Date</td>
-              <td class="short">Topic</td>
-              <td>Reading</td>
-            </tr>
-            <tr>
-              <td>01/09 Week 1</td>
-              <td class="alignleft">Class Intro HTML review</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Wroblewski, <em>Mobile First,</em>,
-                    <ul><li class="nobullet">Introduction &#x26; Part 1 &#x28;Ch. 1-3&#x29;</li></ul>
-                  </li>
-                  <li>Reread Mozilla Developer Network <a href="#links">Links</a></li>
-                </ol>
-              </td>
-            </tr>
-            <tr id="w2">
-              <td>01/16 Week 2</td>
-              <td class="alignleft">No Class</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>01/23 Week 3</td>
-              <td class="alignleft">CSS Review, Relative Units</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Jehl, <em>Responsible Responsive Design</em>,
-                    <ul><li class="nobullet">Introduction, Chapters 1 &#x26; 2</li></ul>
-                  </li>
-                </ol>
-              </td>
-            </tr>
-            <tr id="w4">
-              <td>01/30 Week 4</td>
-              <td class="alignleft">JS Review, Responsive Design</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Clark <em>Designing for Touch</em>,
-                    <ul><li class="nobullet">Chapters 1-3</li></ul>
-                  </li>
-                  <li>Wroblewski, <em>Mobile First</em>,
-                    <ul><li class="nobullet">Part 2 &#x28;Ch. 4-7&#x29;</li></ul>
-                  </li>
-                  <li>MDN <a href="https://developer.mozilla.org/en-US/Apps/Progressive/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a></li>
-                </ol>
-              </td>
-            </tr>
-            <tr>
-              <td>02/06 Week 5</td>
-              <td class="alignleft">Touchscreen, and forms</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Clark <em>Designing for Touch</em>,
-                    <ul><li class="nobullet">Chapters 4 &#x26; 5</li></ul>
-                  </li>
-                  <li>Lupton, ed., <em>Type on Screen</em>,
-                    <ul><li class="nobullet">Chapter 1</li></ul>
-                  </li>
-                  <li>MDN: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms">HTML Forms Guide</a></li>
-                </ol>
-              </td>
-            </tr>
-            <tr id="w6">
-              <td>02/13 Week 6</td>
-              <td class="alignleft">Typography</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Lupton, ed., <em>Type on Screen</em>,
-                    <ul><li class="nobullet">Chapters 2 &#x26; 4</li></ul>
-                  </li>
-                </ol>
-              </td>
-            </tr>
-            <tr>
-              <td>02/20 Week 7</td>
-              <td class="alignleft">Interface Typography</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Lupton, ed., <em>Type on Screen</em>,
-                    <ul><li class="nobullet">Chapter 5</li></ul>
-                  </li>
-                </ol>
-              </td>
-            </tr>
-            <tr id="w8">
-              <td>02/27 Week 8</td>
-              <td class="alignleft">Colors</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Creative Bloq <a href="http://www.creativebloq.com/colour/colour-theory-11121290">How to master colour theory</a></li>
-                  <li>Google <a href="https://material.io/guidelines/">Material Design</a></li>
-                  <li>
-                    Smashing Magazine, Color Theory for Designers:
-                    <ul>
-                      <li><a href="https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/">Part 1</a>,
-                      <a href="https://www.smashingmagazine.com/2010/02/color-theory-for-designers-part-2-understanding-concepts-and-terminology/">Part 2</a>,
-                      <a href="https://www.smashingmagazine.com/2010/02/color-theory-for-designer-part-3-creating-your-own-color-palettes/">Part 3</a></li>
+          <div class="panel-group" id="class_schedule">
+            <div class="panel panel-default">
+              <div class="panel-heading" >
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w1" id="w1_t">01/09 Week 1</a>
+                </h4>
+              </div>
+              <div id="w1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <ul>
+                    <li>Class Intro HTML review</li>
+                    <li>Wroblewski, <em>Mobile First,</em>,
+                      <ul><li class="nobullet">Introduction &#x26; Part 1 &#x28;Ch. 1-3&#x29;</li></ul>
+                    </li>
+                    <li>Reread Mozilla Developer Network <a href="#links">Links</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w2" id="w2_t">01/16 Week 2</a>
+                </h4>
+              </div>
+              <div id="w2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>No Class</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w3" id="w3_t">01/23 Week 3</a>
+                </h4>
+              </div>
+              <div id="w3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>CSS Review, Relative Units</li>
+                    <li>Jehl, <em>Responsible Responsive Design</em>,
+                      <ul><li class="nobullet">Introduction, Chapters 1 &#x26; 2</li></ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w4" id="w4_t">01/30 Week 4</a>
+                </h4>
+              </div>
+              <div id="w4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>JS Review, Responsive Design</li>
+                    <li>Clark <em>Designing for Touch</em>,
+                      <ul><li class="nobullet">Chapters 1-3</li></ul>
+                    </li>
+                    <li>Wroblewski, <em>Mobile First</em>,
+                      <ul><li class="nobullet">Part 2 &#x28;Ch. 4-7&#x29;</li></ul>
+                    </li>
+                    <li>MDN <a href="https://developer.mozilla.org/en-US/Apps/Progressive/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w5" id="w5_t">02/06 Week 5</a>
+                </h4>
+              </div>
+              <div id="w5" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Touchscreen, and forms</li>
+                    <li>Clark <em>Designing for Touch</em>,
+                      <ul><li class="nobullet">Chapters 4 &#x26; 5</li></ul>
+                    </li>
+                    <li>Lupton, ed., <em>Type on Screen</em>,
+                      <ul><li class="nobullet">Chapter 1</li></ul>
+                    </li>
+                    <li>MDN: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms">HTML Forms Guide</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w6" id="w6_t">02/13 Week 6</a>
+                </h4>
+              </div>
+              <div id="w6" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Typography</li>
+                    <li>Lupton, ed., <em>Type on Screen</em>,
+                      <ul><li class="nobullet">Chapters 2 &#x26; 4</li></ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w7" id="w7_t">02/20 Week 7</a>
+                </h4>
+              </div>
+              <div id="w7" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Interface Typography</li>
+                    <li>Lupton, ed., <em>Type on Screen</em>,
+                      <ul><li class="nobullet">Chapter 5</li></ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w8" id="w8_t">02/27 Week 8</a>
+                </h4>
+              </div>
+              <div id="w8" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Colors</li>
+                    <li>Creative Bloq <a href="http://www.creativebloq.com/colour/colour-theory-11121290">How to master colour theory</a></li>
+                    <li>Google <a href="https://material.io/guidelines/">Material Design</a></li>
+                    <li>
+                      Smashing Magazine, Color Theory for Designers:
+                      <ul>
+                        <li><a href="https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/">Part 1</a>,
+                        <a href="https://www.smashingmagazine.com/2010/02/color-theory-for-designers-part-2-understanding-concepts-and-terminology/">Part 2</a>,
+                        <a href="https://www.smashingmagazine.com/2010/02/color-theory-for-designer-part-3-creating-your-own-color-palettes/">Part 3</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w9" id="w9_t">03/06 Week 9</a>
+                </h4>
+              </div>
+            <div id="w9" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Material Design</li>
+                    <li>Lupton <em>Type on Screen</em>,
+                      <ul><li class="nobullet">Chapters 6</li></ul>
+                    </li>
+                    <li>Amin Al Hazmani, <a href="https://alistapart.com/article/motion-with-meaning-semantic-animation-in-interface-design">Motion with Meaning</a></li>
+                    <li>Craig Dehner, <a href="http://thekineticui.com/motion-design-is-the-future-of-ui/">Motion Design is the Future of UI</a></li>
+                    <li>Val Head, <a href="https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity">Designing Safer Web Animation For Motion Sensitivity</a></li>
                     </ul>
-                  </li>
-                </ol>
-              </td>
-            </tr>
-            <tr>
-              <td>03/06 Week 9</td>
-              <td class="alignleft">Material Design</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Lupton <em>Type on Screen</em>,
-                    <ul><li class="nobullet">Chapters 6</li></ul>
-                  </li>
-                  <li>Amin Al Hazmani, <a href="https://alistapart.com/article/motion-with-meaning-semantic-animation-in-interface-design">Motion with Meaning</a></li>
-                  <li>Craig Dehner, <a href="http://thekineticui.com/motion-design-is-the-future-of-ui/">Motion Design is the Future of UI</a></li>
-                  <li>Val Head, <a href="https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity">Designing Safer Web Animation For Motion Sensitivity</a></li>
-                </ol>
-              </td>
-            </tr>
-            <tr id="w10">
-              <td>03/13 Week 10</td>
-              <td class="alignleft">NO CLASS</td>
-              <td>Enjoy Spring Break!</td>
-            </tr>
-            <tr>
-              <td>03/20 Week 11</td>
-              <td class="alignleft">Motion</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Cheung, <a href="http://www.uxbooth.com/articles/styling-forms-accessibly/">Styling Forms Accessibly</a></li>
-                </ol>
-              </td>
-            </tr>
-            <tr id="w12">
-              <td>03/27 Week 12</td>
-              <td class="alignleft">HCI Guidelines, Ethics</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Jehl, <em>Responsible Responsive Design</em>,
-                    <ul><li class="nobullet">Chapters 3-4</li></ul>
-                  </li>
-                  <li>Apple, <a href="https://developer.apple.com/ios/human-interface-guidelines/overview/themes/">iOS Design Principles</a></li>
-                  <li>Windows, <a href="https://developer.microsoft.com/en-us/windows/desktop/design">Design applications for the Windows desktop</a></li>
-                  <li>GNOME Desktop, <a href="https://developer.gnome.org/hig/stable/">Human Interface Guidelines</a></li>
-                  </ol>
-              </td>
-            </tr>
-            <tr>
-              <td>04/03 Week 13</td>
-              <td class="alignleft">Usability</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Krug, <em>Don’t Make Me Think</em>,
-                    <ul><li class="nobullet">Introduction &#x26; Chapters 1-5</li></ul>
-                  </li>
-                  <li>Lupton <em>Type on Screen</em>,
-                    <ul><li class="nobullet">Chapter 3</li></ul>
-                  </li>
-                </ol>
-              </td>
-            </tr>
-            <tr id="w14">
-              <td>04/10 Week 14</td>
-              <td class="alignleft">Emotional Design</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Krug, <em>Don’t Make Me Think</em>,
-                    <ul><li class="nobullet">Chapters 6-7 &#x26; 10-11</li></ul>
-                  </li>
-                </ol>
-              </td>
-            </tr>
-            <tr>
-              <td>04/17 Week 15</td>
-              <td class="alignleft">Usability Testing</td>
-              <td>
-                <ol class="alignleft">
-                  <li>Krug, <em>Don’t Make Me Think</em>,
-                    <ul><li class="nobullet">Chapters 8-9 &#x26; 12-13</li></ul>
-                  </li>
-                </ol>
-              </td>
-            </tr>
-            <tr id="w16">
-              <td>04/24 Week 16</td>
-              <td class="alignleft">Remote User-Testing</td>
-              <td></td>
-            </tr>
-          </table>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w10" id="w10_t">03/13 Week 10</a>
+                </h4>
+              </div>
+              <div id="w10" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>NO CLASS</li>
+                    <li>Enjoy Spring Break!!!!</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w11" id="w11_t">03/20 Week 11</a>
+                </h4>
+              </div>
+              <div id="w11" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Motion</li>
+                    <li>Cheung, <a href="http://www.uxbooth.com/articles/styling-forms-accessibly/">Styling Forms Accessibly</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w12" id="w12_t">03/27 Week 12</a>
+                </h4>
+              </div>
+              <div id="w12" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Jehl, <em>Responsible Responsive Design</em>,
+                      <ul><li class="nobullet">Chapters 3-4</li></ul>
+                    </li>
+                    <li>Apple, <a href="https://developer.apple.com/ios/human-interface-guidelines/overview/themes/">iOS Design Principles</a></li>
+                    <li>Windows, <a href="https://developer.microsoft.com/en-us/windows/desktop/design">Design applications for the Windows desktop</a></li>
+                    <li>GNOME Desktop, <a href="https://developer.gnome.org/hig/stable/">Human Interface Guidelines</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w13" id="w13_t">04/03 Week 13</a>
+                </h4>
+              </div>
+              <div id="w13" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Usability</li>
+                    <li>Krug, <em>Don’t Make Me Think</em>,
+                      <ul><li class="nobullet">Introduction &#x26; Chapters 1-5</li></ul>
+                    </li>
+                    <li>Lupton <em>Type on Screen</em>,
+                      <ul><li class="nobullet">Chapter 3</li></ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w14" id="w14_t">04/10 Week 14</a>
+                </h4>
+              </div>
+              <div id="w14" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Emotional Design</li>
+                    <li>Krug, <em>Don’t Make Me Think</em>,
+                      <ul><li class="nobullet">Chapters 6-7 &#x26; 10-11</li></ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w15" id="w15_t">04/17 Week 15</a>
+                </h4>
+              </div>
+              <div id="w15" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Usability Testing</li>
+                    <li>Krug, <em>Don’t Make Me Think</em>,
+                      <ul><li class="nobullet">Chapters 8-9 &#x26; 12-13</li></ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#class_schedule" href="#w16" id="w16_t">04/24 Week 16</a>
+                </h4>
+              </div>
+              <div id="w16" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Remote User-Testing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="due-dates">
           <table>
             <tr class="tablehead">
-              <td class="firstrow"></td>
               <td class="tabletitle">Homework Schedule&#58;</td>
             </tr>
-            <tr class="tablehead">
-              <td>Date</td>
-              <td class="secondrow">Task Due</td>
-            </tr>
             <tr id="labs_t">
-              <td></td>
               <td><a href="https://github.com/dkriegls/itmd-362-spring2018/tree/master/Labs">Labs</a></td>
             </tr>
             <tr>
-              <td>01/30</td>
-              <td class="alignleft">Lab-1</td>
+              <td>01/30 Lab-1</td>
             </tr>
             <tr>
-              <td>02/13</td>
-              <td class="alignleft">Lab-2</td>
+              <td>02/13 Lab-2</td>
             </tr>
             <tr>
-              <td>02/13</td>
-              <td class="alignleft">Lab-3</td>
+              <td>02/13 Lab-3</td>
             </tr>
             <tr>
-              <td>03/06</td>
-              <td class="alignleft">Lab-4</td>
+              <td>03/06 Lab-4</td>
             </tr>
             <tr>
-              <td>03/13</td>
-              <td class="alignleft">Lab-5</td>
+              <td>03/13 Lab-5</td>
             </tr>
             <tr>
-              <td>03/27</td>
-              <td class="alignleft">Lab-6</td>
+              <td>03/27 Lab-6</td>
             </tr>
             <tr>
-              <td>04/03</td>
-              <td class="alignleft">Lab-7</td>
+              <td>04/03 Lab-7</td>
             </tr>
             <tr>
-              <td>04/10</td>
-              <td class="alignleft">Lab-8</td>
+              <td>04/10 Lab-8</td>
+            </tr>
+          </table>
+          <table>
+            <tr class="tablehead">
+              <td class="tabletitle">Homework Schedule&#58;</td>
             </tr>
             <tr id="pro1_t">
-              <td></td>
               <td><a href="projects.html#project-one">Project One</a></td>
             </tr>
             <tr>
-              <td>02/20</td>
-              <td class="alignleft">First Turn In</td>
+              <td class="alignleft">02/20 First Turn In</td>
             </tr>
             <tr>
-              <td>02/27</td>
-              <td class="alignleft">Comments Due</td>
+              <td class="alignleft">02/27 Comments Due</td>
             </tr>
             <tr>
-              <td>03/06</td>
-              <td class="alignleft">Final Turn In</td>
+              <td class="alignleft">03/06 Final Turn In</td>
             </tr>
             <tr id="pro2_t">
-              <td></td>
               <td><a href="projects.html#project-two">Project Two</a></td>
             </tr>
             <tr>
-              <td>03/20</td>
-              <td class="alignleft">Task Analysis Due</td>
+              <td class="alignleft">03/20 Task Analysis Due</td>
             </tr>
             <tr>
-              <td>04/03</td>
-              <td class="alignleft">First Turn In</td>
+              <td class="alignleft">04/03 First Turn In</td>
             </tr>
             <tr>
-              <td>04/10</td>
-              <td class="alignleft">Comments Due</td>
+              <td class="alignleft">04/10 Comments Due</td>
             </tr>
             <tr>
-              <td>04/24</td>
-              <td class="alignleft">Final Turn In</td>
+              <td class="alignleft">04/24 Final Turn In</td>
             </tr>
             <tr id="pro3_t">
-              <td></td>
               <td><a href="projects.html#project-three">Project Three</a></td>
             </tr>
             <tr>
-              <td>04/24</td>
-              <td class="alignleft">First and Only Turn In</td>
+              <td class="alignleft">04/24 First and Only Turn In</td>
             </tr>
           </table>
         </section>
