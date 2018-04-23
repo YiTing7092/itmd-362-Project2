@@ -170,6 +170,7 @@ nav {
 }
 .panel-title{
   background-color: #FFD3A2;
+  text-align: center;
 }
 
 #w1_t,#w2_t,#w3_t,
@@ -178,8 +179,6 @@ nav {
 #w10_t,#w11_t,#w12_t,
 #w13_t,#w14_t,#w15_t,
 #w16_t{
-  text-align: center;
-  display: block;
   background-color: #FFD3A2;
 }
 
