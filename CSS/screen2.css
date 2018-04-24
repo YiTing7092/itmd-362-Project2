@@ -122,6 +122,7 @@ h3 {
   font-weight: bold;
   background-color: #F06C94;
   padding: 0.5em 0 0.5em 0.3em;
+  margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
 
@@ -164,13 +165,6 @@ nav {
 #ca_head,
 #ca_body{
   background-color: #FFD3A2;
-}
-.panel-group{
-  background-color: #FFD3A2;
-}
-.panel-title{
-  background-color: #FFD3A2;
-  text-align: center;
 }
 
 #w1_t,#w2_t,#w3_t,
@@ -326,6 +320,23 @@ nav {
 #calendar .is-next {
   margin-bottom: 1.2631578947em;
 }
+/* Button*/
+.accordion {
+  background-color: #e8abb2;
+  color: #333;
+  cursor: pointer;
+  padding: 0.6315789474em;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #FFD3A2;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.active, .accordion:hover {
+  background-color: #9D6D72;
+}
 
 
 /* Table */
@@ -335,7 +346,7 @@ table {
   margin-bottom: 1em;
 }
 table, th, td {
-	border: 1px solid #59453C;
+	border: 1px solid #FFD3A2;
 	padding: 0px 10px;
 }
 .tablehead {
@@ -478,6 +489,9 @@ td {
   #h3wide{
     width: 300px;
     text-align: left;
+  }
+  #protable{
+    width: 300px;
   }
 }
 

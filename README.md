@@ -1,1 +1,1 @@
-# itmd-362-Project2
+# Project2
